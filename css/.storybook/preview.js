@@ -1,4 +1,4 @@
-import "tailwind.css"
+import "./tailwind.css"
 
 /** @type { import('@storybook/html').Preview } */
 const preview = {
