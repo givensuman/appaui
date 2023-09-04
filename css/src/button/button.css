@@ -1,0 +1,139 @@
+/* Button Styles */
+.btn {
+    width: fit-content;
+    height: fit-content;
+    
+    @apply py-2 px-4 font-semibold text-lg rounded-md cursor-pointer bg-gray-100
+    
+    dark:bg-gray-700
+  
+    disabled:cursor-not-allowed
+    ;
+  
+    &:not(.is-static) {
+      @apply hover:transition-colors hover:bg-gray-200 focus:z-10 focus:outline-none focus:ring-4 focus:ring-blue-400/75 
+      
+      dark:hover:bg-gray-600
+      ;
+    }
+  
+    /* ... Size, Style, and Color Variants ... */
+        /* Size Variants */
+
+        &.is-xs, &.is-extrasmall {
+            @apply text-sm py-0.5 px-1;
+        }
+    
+        &.is-sm, &.is-small {
+            @apply text-base py-1 px-2;
+        }
+    
+        &.is-lg, &.is-large {
+            @apply text-2xl py-2.5 px-5;
+        }
+    
+        /* Style Variants */
+        
+        &.is-ghost {
+            @apply bg-transparent 
+    
+            dark:bg-transparent dark:text-inherit
+            ;
+        }
+        &.is-ghost:not(.is-static) {
+            @apply hover:bg-gray-200/50
+            
+            dark:hover:bg-gray-600/50
+            ;
+        }
+    
+        &.is-outline {
+            @apply bg-transparent border-2 border-gray-200
+    
+            dark:bg-transparent dark:text-inherit dark:border-gray-600
+            ;
+        }
+        &.is-outline:not(.is-static) {    
+            @apply hover:bg-gray-200/50
+    
+            dark:hover:bg-gray-600/50
+            ;
+        }
+    
+        /* Color Variants */
+    
+        @each $color in slate, gray, zinc, neutral, stone, red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose {
+    
+            &.is-$(color) {
+                @apply bg-$(color)-500 text-white
+                
+                dark:bg-$(color)-500
+                ;
+            }
+    
+            &.is-$(color):not(.is-static) {
+                @apply hover:bg-$(color)-600
+    
+                focus:ring-$(color)-400/75
+    
+                dark:hover:bg-$(color)-600
+                ;
+            }
+    
+            &.is-$(color).is-ghost {
+                @apply bg-transparent text-$(color)-700 
+    
+                dark:text-$(color)-300
+                ;
+            }
+            &.is-$(color).is-ghost:not(.is-static) {      
+                @apply hover:bg-$(color)-200/50
+    
+                dark:hover:bg-$(color)-200/25
+                ;
+            }
+            
+            
+            &.is-$(color).is-outline {
+                @apply bg-transparent text-$(color)-700 border-2 border-$(color)-500 text-$(color)-700
+    
+                dark:text-$(color)-300
+                ;
+            }
+    
+            &.is-$(color).is-outline:not(.is-static) {
+                @apply hover:bg-$(color)-200/50
+    
+                dark:hover:bg-$(color)-200/25
+                ;
+            }
+        }
+    }
+  
+  /* Icon Button */
+  .icon-btn {
+    @apply btn py-2 px-2;
+  }
+  
+  /* Button Group */
+  .btn-group {
+    @apply inline-flex items-center space-x-0;
+  
+    .btn, .icon-btn {
+      @apply rounded-none;
+  
+      &:first-child {
+        @apply rounded-l-md;
+      }
+      &:last-child {
+        @apply rounded-r-md;
+      }
+      &:not(:first-child) {
+        @apply ml-0;
+      }
+      &:not(:last-child) {
+        @apply mr-0;
+      }
+    }
+  }
+  
