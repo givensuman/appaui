@@ -1,8 +1,22 @@
 .btn {
   @apply 
-    py-2 px-3 rounded-md bg-cyan-500 text-white font-bold transition-colors
+    py-2 
+    px-3 
+    rounded-md 
+    bg-blue-500 
+    text-white 
+    font-bold 
+    transition-colors
 
-    hover:bg-cyan-600
-    active:bg-cyan-700
+    hover:bg-blue-600
+
+    active:bg-blue-700
   ;
+
+  &.is-xs, &.is-extrasmall {
+    @apply 
+      py-1
+      px-2
+    ;
+  }
 }

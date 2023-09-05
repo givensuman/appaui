@@ -12,8 +12,8 @@ export const Primary = {
   },
 };
 
-export const PrimaryOutlined = {
+export const ExtraSmall = {
   args: {
-    class: "btn outline outline-pink-500"
+    class: "btn is-xs"
   }
 }
