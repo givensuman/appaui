@@ -545,24 +545,271 @@ video {
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255/var(--tw-text-opacity));
+}
+
+.btn:not(.is-static) {
   transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
   transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   transition-duration: 150ms;
 }
 
-.btn:hover {
+.btn:not(.is-static):hover {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235/var(--tw-bg-opacity));
 }
 
-.btn:active {
+.btn:not(.is-static):active {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216/var(--tw-bg-opacity));
 }
 
 .btn.is-xs,.btn.is-extrasmall {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.btn.is-sm,.btn.is-small {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.btn.is-lg,.btn.is-large {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.btn.is-ghost {
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138/var(--tw-text-opacity));
+}
+
+.btn.is-ghost:not(.is-static):hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254/var(--tw-bg-opacity));
+}
+
+.btn.is-ghost:not(.is-static):active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254/var(--tw-bg-opacity));
+}
+
+.btn.is-outline {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246/var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138/var(--tw-text-opacity));
+}
+
+.btn.is-outline:not(.is-static):hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254/var(--tw-bg-opacity));
+}
+
+.btn.is-outline:not(.is-static):active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254/var(--tw-bg-opacity));
+}
+
+.btn.is-link {
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138/var(--tw-text-opacity));
+}
+
+.btn.is-link:not(.is-static):hover {
+  background-color: transparent;
+  text-decoration-line: underline;
+}
+
+.btn.is-link:not(.is-static):active {
+  --tw-text-opacity: 1;
+  color: rgb(23 37 84/var(--tw-text-opacity));
+}
+
+.icon-btn {
+  border-radius: 0.375rem;
+  border-radius: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246/var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+}
+
+.icon-btn:not(.is-static) {
+  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-duration: 150ms;
+}
+
+.icon-btn:not(.is-static):hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235/var(--tw-bg-opacity));
+}
+
+.icon-btn:not(.is-static):active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216/var(--tw-bg-opacity));
+}
+
+.icon-btn.is-xs,.icon-btn.is-extrasmall {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.icon-btn.is-sm,.icon-btn.is-small {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.icon-btn.is-lg,.icon-btn.is-large {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.icon-btn.is-ghost {
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138/var(--tw-text-opacity));
+}
+
+.icon-btn.is-ghost:not(.is-static):hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254/var(--tw-bg-opacity));
+}
+
+.icon-btn.is-ghost:not(.is-static):active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254/var(--tw-bg-opacity));
+}
+
+.icon-btn.is-outline {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246/var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138/var(--tw-text-opacity));
+}
+
+.icon-btn.is-outline:not(.is-static):hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254/var(--tw-bg-opacity));
+}
+
+.icon-btn.is-outline:not(.is-static):active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254/var(--tw-bg-opacity));
+}
+
+.icon-btn.is-link {
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138/var(--tw-text-opacity));
+}
+
+.icon-btn.is-link:not(.is-static):hover {
+  background-color: transparent;
+  text-decoration-line: underline;
+}
+
+.icon-btn.is-link:not(.is-static):active {
+  --tw-text-opacity: 1;
+  color: rgb(23 37 84/var(--tw-text-opacity));
+}
+
+.btn-group .icon-btn {
+  border-radius: 0px;
+}
+
+.btn-group .icon-btn:first-child {
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.btn-group .icon-btn:last-child {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
+.btn-group .icon-btn:not(:first-child) {
+  margin-left: 0px;
+}
+
+.btn-group .icon-btn:not(:last-child) {
+  margin-right: 0px;
+}
+
+.btn-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-group>:not([hidden])~:not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0px * var(--tw-space-x-reverse));
+  margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.btn-group .btn,.btn-group .icon-btn {
+  border-radius: 0px;
+}
+
+.btn-group .btn:first-child,.btn-group .icon-btn:first-child {
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.btn-group .btn:last-child,.btn-group .icon-btn:last-child {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
+.btn-group .btn:not(:first-child),.btn-group .icon-btn:not(:first-child) {
+  margin-left: 0px;
+}
+
+.btn-group .btn:not(:last-child),.btn-group .icon-btn:not(:last-child) {
+  margin-right: 0px;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }

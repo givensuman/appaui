@@ -7,7 +7,7 @@
     "compile:tailwind": "pnpm dlx tailwindcss -i ./.storybook/storybook.css -o ./.storybook/tailwind.css",
     "compile:tailwind:watch": "onchange \"build/css/*.css\" \"src/**/*.stories.js\" -- pnpm compile:tailwind",
     "compile:css": "postcss src/**/*.css --dir build/css",
-    "compile:css:watch": "onchange \"src/**/*.css\" -- pnpm compile:css",
+    "compile:css:watch": "onchange \"src/**/*\" -- pnpm compile:css",
     "transpile:css": "prejss-cli build/css --out-dir build/jss --format commonjs",
     "transpile:css:watch": "onchange \"build/css/*.css\" -- pnpm transpile:css",
     "writeindex": "node scripts/write-index",
@@ -16,11 +16,12 @@
     "build:watch": "onchange \"src/**/*.css\" -- pnpm build",
     "storybook": "storybook dev -p 4242 --disable-telemetry",
     "storybook:watch": "concurrently \"pnpm compile:tailwind:watch\" \"pnpm storybook\"",
-    "dev": "concurrently \"pnpm build:watch\" \"pnpm storybook:watch\" -n build,storybook -c cyan,magenta"
+    "watch": "concurrently \"pnpm build:watch\" \"pnpm storybook:watch\" -n build,storybook -c cyan,magenta",
+    "dev": "pnpm build && pnpm watch"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@storybook/addon-essentials": "7.4.0",
     "@storybook/addon-interactions": "7.4.0",
