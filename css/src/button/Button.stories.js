@@ -8,7 +8,7 @@ export default {
 
 export const Default = {
   args: {
-    class: "btn"
+    class: "btn bg-transparent"
   },
 };
 

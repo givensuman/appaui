@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:tailwind": "pnpm dlx tailwindcss -i ./.storybook/storybook.css -o ./.storybook/tailwind.css",
+    "compile:tailwind": "pnpm dlx tailwindcss -i ./.storybook/storybook.css -o ./.storybook/tailwind.css --env storybook",
     "compile:tailwind:watch": "onchange \"build/css/*.css\" \"src/**/*.stories.js\" -- pnpm compile:tailwind",
     "compile:css": "postcss src/**/*.css --dir build/css",
     "compile:css:watch": "onchange \"src/**/*\" -- pnpm compile:css",
@@ -16,8 +16,7 @@
     "build:watch": "onchange \"src/**/*.css\" -- pnpm build",
     "storybook": "storybook dev -p 4242 --disable-telemetry",
     "storybook:watch": "concurrently \"pnpm compile:tailwind:watch\" \"pnpm storybook\"",
-    "watch": "concurrently \"pnpm build:watch\" \"pnpm storybook:watch\" -n build,storybook -c cyan,magenta",
-    "dev": "pnpm build && pnpm watch"
+    "dev": "pnpm build && concurrently \"pnpm build:watch\" \"pnpm storybook:watch\" -n build,storybook -c cyan,magenta"
   },
   "keywords": [],
   "author": "",
