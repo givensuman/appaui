@@ -1,5 +1,5 @@
 module.exports = (ctx) => ({
-  plugins: ctx.env === 'storybook' 
+  plugins: ctx.env !== 'storybook' 
     ? [
       require("postcss-minify"),
       require("postcss-discard-comments"),
